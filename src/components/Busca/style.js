@@ -7,7 +7,7 @@ export const InputBusca = styled.input`
   margin-left: 20px;
   font-size: 20px;
   height: 1.1em;
-  width: 95%;
+  width: 80%;
   ::placeholder {
     color: #ff1210;
     font-size: 20px;

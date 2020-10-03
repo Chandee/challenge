@@ -1,8 +1,32 @@
 import React from "react";
 import CardPersonagem from "../components/CardPersonagem/CardPersonagem";
 import HeaderMain from "../components/HeaderMain";
+import ListaPersonagem from "../components/ListaPersonagem";
 
 function Home() {
+  const teste = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ];
+
   return (
     <>
       <HeaderMain></HeaderMain>
@@ -10,12 +34,11 @@ function Home() {
         style={{
           background: "yellow",
           width: "100%",
-          height: "200px",
           position: "relative",
         }}
       >
         <div style={{ position: "absolute", bottom: 0 }}>teste</div>
-        <CardPersonagem nome={"Hulk"} />
+        <ListaPersonagem lista={teste} />
         corpo ground
       </section>
       <footer

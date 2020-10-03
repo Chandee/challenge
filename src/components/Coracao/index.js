@@ -13,6 +13,7 @@ function Coracao({ salvo = false, tamanho = 1 }) {
       src={caminhoImagem}
       alt="coração"
       tamanho={tamanho}
+      meuAtivo={ativo}
     />
   );
 }
