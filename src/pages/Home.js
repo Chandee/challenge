@@ -1,12 +1,11 @@
 import React from "react";
 import CardPersonagem from "../components/CardPersonagem/CardPersonagem";
+import Header from "../components/Header";
 
 function Home() {
   return (
     <>
-      <header style={{ background: "blue", width: "100%", height: "200px" }}>
-        teste ground
-      </header>
+      <Header></Header>
       <section
         style={{
           background: "yellow",
