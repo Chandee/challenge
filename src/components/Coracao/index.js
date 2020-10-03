@@ -9,7 +9,7 @@ function Coracao({ salvo = false, tamanho = 1 }) {
 
   return (
     <CoracaoStyle
-      onCli ck={() => setAtivo(!ativo)}
+      onClick={() => setAtivo(!ativo)}
       src={caminhoImagem}
       alt="coração"
       tamanho={tamanho}
