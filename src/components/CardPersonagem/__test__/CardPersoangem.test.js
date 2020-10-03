@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, wait } from "@testing-library/react";
 import CardPersonagem from "../CardPersonagem";
 
 test("Verifica se renderiza o componente", () => {
@@ -11,14 +11,17 @@ test("Verifica existencia de imagem e alt text", () => {
   expect(getByAltText(/personagem/i)).toBeInTheDocument();
 });
 test("Verifica existencia de imagem", () => {
-  const { getByRole } = render(<CardPersonagem />);
-  expect(getByRole("img")).toHaveAttribute("src", /.jpg/i);
+  const { queryAllByRole } = render(<CardPersonagem />);
+
+  expect(queryAllByRole("img")[0].src).toMatch(/.jpg/i);
 });
-test("Verifica se executa ação no click", () => {
+test("Verifica se executa ação no click", async () => {
   const funcaoTeste = jest.fn();
   const { getByAltText } = render(<CardPersonagem onClick={funcaoTeste} />);
   fireEvent.click(getByAltText(/personagem/i));
-  expect(funcaoTeste).toBeCalled();
+  await wait(() => {
+    expect(funcaoTeste).toBeCalled();
+  });
 });
 test("Verifica existencia do nome do personagem", () => {
   const { getByText } = render(<CardPersonagem nome={"hulk"} />);
