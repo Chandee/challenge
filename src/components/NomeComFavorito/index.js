@@ -2,12 +2,12 @@ import React from "react";
 import { NomePersonagem, WrapperCoracao } from "../CardPersonagem/style";
 import Coracao from "../Coracao";
 
-function NomeComFavorito({ nome }) {
+function NomeComFavorito({ nome, tamanho = 1 }) {
   return (
     <>
-      <NomePersonagem> {nome}</NomePersonagem>
+      <NomePersonagem tamanho={tamanho}> {nome}</NomePersonagem>
       <WrapperCoracao>
-        <Coracao />
+        <Coracao tamanho={tamanho}/>
       </WrapperCoracao>
     </>
   );

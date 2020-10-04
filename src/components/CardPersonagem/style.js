@@ -9,7 +9,7 @@ export const ImagemPersonagem = styled.img`
 export const NomePersonagem = styled.span`
   font-weight: bold;
   display: inline-block;
-  font-size: 20px;
+  font-size: ${({ tamanho }) => tamanho * 20}px;
 `;
 
 export const WrapperBottom = styled.div`
@@ -33,8 +33,7 @@ export const WrapperCardPersonagem = styled.div`
 `;
 
 export const WrapperCoracao = styled.div`
-    position: absolute;
-    right: 0;
-    display: inline-block;
-`
-
+  position: absolute;
+  right: 0;
+  display: inline-block;
+`;

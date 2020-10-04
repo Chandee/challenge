@@ -4,7 +4,7 @@ export const Texto = styled.p`
   align-self: center;
   font-size: 16px;
   color: ${({ preto }) => (preto ? "#404040" : "#ff1510")};
-  margin-left: 30px;
+  margin-left: ${({ tamanho }) => tamanho * 30}px;
 `;
 
 export const ImagemIcone = styled.img`
@@ -12,8 +12,8 @@ export const ImagemIcone = styled.img`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  max-width: 20px;
-  max-height: 30px;
+  max-width: ${({ tamanho }) => tamanho * 20}px;
+  max-height: ${({ tamanho }) => tamanho * 30}px;
 `;
 
 export const Wrapper = styled.div`
