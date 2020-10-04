@@ -1,6 +1,6 @@
 import React from "react";
 import { Texto, ImagemIcone, Wrapper } from "./style";
-function IconeComTexto({ imagem, texto, vermelho, alt }) {
+function IconeComTexto({ imagem, texto, preto, alt }) {
   return (
     <Wrapper>
       <ImagemIcone src={imagem} alt={alt} />

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Texto = styled.p`
   align-self: center;
   font-size: 16px;
-  color: #ff1510;
+  color: ${({ preto }) => (preto ? "#404040" : "#ff1510")};
   margin-left: 30px;
 `;
 

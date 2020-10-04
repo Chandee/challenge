@@ -8,7 +8,7 @@ function Home() {
           padding: '40px 80px 0px 80px',
       }}>
         <HeaderHeroi></HeaderHeroi>
-        
+        <InformacaoHeroi/>
       </div>
 
       <footer
