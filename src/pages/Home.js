@@ -37,7 +37,14 @@ function Home() {
           position: "relative",
         }}
       >
-        <div style={{ position: "absolute", bottom: 0 }}>teste</div>
+        <div>
+          <div >
+          Encontrados {teste.length} heróis
+          </div>
+          <div>
+            
+          </div>
+        </div>
         <ListaPersonagem lista={teste} />
         corpo ground
       </section>
