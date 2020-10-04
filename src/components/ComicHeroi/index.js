@@ -1,12 +1,29 @@
 import React from "react";
 
-function ComicHeroi() {
+function ComicHeroi({ titulo, imagem }) {
   return (
-    <>
+    <div
+      style={{
+        margin: "80px 40px 10px 40px",
+      }}
+    >
       <img
-        src={"http://i.annihil.us/u/prod/marvel/i/mg/b/d0/4badb223f33c9.jpg"}
+        style={{
+          height: "250px",
+          width: "180px",
+          marginBottom: "20px",
+        }}
+        src={imagem}
       />
-    </>
+      <span
+        style={{
+          display: "block",
+          fontWeight: "bold",
+        }}
+      >
+        {titulo}
+      </span>
+    </div>
   );
 }
 
