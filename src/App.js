@@ -14,6 +14,7 @@ const WrapperApp = styled.div`
 
 function App() {
   const location = useLocation();
+  console.log("asadas", location)
 
   return (
     <WrapperApp caminho={location.pathname}>

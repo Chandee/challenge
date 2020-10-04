@@ -18,7 +18,8 @@ function ComicHeroi({ titulo, imagem }) {
       <span
         style={{
           display: "block",
-          fontWeight: "bold",
+          fontWeight: "bold",   
+          maxWidth: "180px"
         }}
       >
         {titulo}

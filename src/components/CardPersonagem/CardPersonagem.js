@@ -10,11 +10,11 @@ import {
 import Coracao from "../Coracao";
 import NomeComFavorito from "../NomeComFavorito";
 
-function CardPersonagem({ onClick, nome }) {
+function CardPersonagem({ onClick, nome, imagem }) {
   return (
     <WrapperCardPersonagem>
       <ImagemPersonagem
-        src={"http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0.jpg"}
+        src={imagem}
         alt={`personagem ${nome}`}
         onClick={onClick}
       />

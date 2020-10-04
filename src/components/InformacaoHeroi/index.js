@@ -1,7 +1,7 @@
 import React from "react";
 import IconeComTexto from "../IconeComTexto";
 import NomeComFavorito from "../NomeComFavorito";
-import { format } from "date-fns";
+import { format, } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import {
   ContainerImagem,
@@ -19,10 +19,17 @@ import {
   WrapperRating,
 } from "./style";
 
-function InformacaoHeroi({ descricao, nome }) {
+function InformacaoHeroi({
+  descricao,
+  nome,
+  qntdQuadrinho,
+  qntdFilmes,
+  ultimoQuadrinho,
+  imagem,
+}) {
   return (
     <WrapperHeroi>
-      <TextoFundo>{nome.toUpperCase()}</TextoFundo>
+      <TextoFundo>{nome && nome.toUpperCase()}</TextoFundo>
       <WrapperDescricao>
         <NomeComFavorito nome={nome} tamanho={2.2} />
         <ParagrafoDescricao>{descricao}</ParagrafoDescricao>
@@ -31,7 +38,7 @@ function InformacaoHeroi({ descricao, nome }) {
             <TituloInfo>Quadrinhos</TituloInfo>
             <IconeComTexto
               imagem={"./imagens/Quadrinho/Quadrinho.png"}
-              texto={3000}
+              texto={qntdQuadrinho}
               alt="quadrinho"
               tamanho={2}
               preto
@@ -41,7 +48,7 @@ function InformacaoHeroi({ descricao, nome }) {
             <TituloInfo>Filmes</TituloInfo>
             <IconeComTexto
               imagem={"./imagens/Filme/Filme.png"}
-              texto={40}
+              texto={qntdFilmes}
               alt="filme"
               tamanho={2}
               preto
@@ -57,16 +64,15 @@ function InformacaoHeroi({ descricao, nome }) {
           <h4>Último quadrinho:</h4>
 
           <TextoHorario>
-            {format(new Date("2020-07-21T10:35:15-0400"), "dd MMM. yyyy", {
+            {console.log("ultimo quadrinho", ultimoQuadrinho)}
+            {ultimoQuadrinho && format(new Date(ultimoQuadrinho), "dd MMM. yyyy", {
               locale: ptBR,
             })}
           </TextoHorario>
         </WrapperHorario>
       </WrapperDescricao>
       <WrapperImagem>
-        <ContainerImagem
-          src={"http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0.jpg"}
-        />
+        <ContainerImagem src={imagem} />
       </WrapperImagem>
     </WrapperHeroi>
   );

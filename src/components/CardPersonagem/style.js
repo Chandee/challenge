@@ -9,6 +9,10 @@ export const ImagemPersonagem = styled.img`
 export const NomePersonagem = styled.span`
   font-weight: bold;
   display: inline-block;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: ${({ tamanho }) => tamanho * 20}px;
 `;
 

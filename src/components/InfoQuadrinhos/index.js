@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { resgataQuadrinho } from "../../service/Endpoint";
 import ComicHeroi from "../ComicHeroi";
 import { WrapperListaQuadrinho, WrapperQuadrinho } from "./style";
 
-function InfoQuadrinhos() {
+function InfoQuadrinhos({ quadrinhos = []}) {
   const teste = ["", "", "", "", "", "", "", "", "", ""];
+
+
   return (
     <WrapperQuadrinho>
       <h2>Ultimos lançamentos</h2>
       <WrapperListaQuadrinho>
-        {teste.map(() => {
+        {quadrinhos.map((item) => {
           return (
             <ComicHeroi
-              imagem="http://i.annihil.us/u/prod/marvel/i/mg/b/d0/4badb223f33c9.jpg"
-              titulo="quadrinho hulk"
+              imagem={item.thumbnail.path + "." + item.thumbnail.extension}
+              titulo={item.title}
             />
           );
         })}
