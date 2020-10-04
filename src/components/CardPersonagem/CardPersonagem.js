@@ -8,6 +8,7 @@ import {
   WrapperCoracao,
 } from "./style";
 import Coracao from "../Coracao";
+import NomeComFavorito from "../NomeComFavorito";
 
 function CardPersonagem({ onClick, nome }) {
   return (
@@ -19,10 +20,7 @@ function CardPersonagem({ onClick, nome }) {
       />
       <LinhaVermelha />
       <WrapperBottom>
-        <NomePersonagem> {nome}</NomePersonagem>
-        <WrapperCoracao>
-          <Coracao />
-        </WrapperCoracao>
+        <NomeComFavorito nome={nome}/>
       </WrapperBottom>
     </WrapperCardPersonagem>
   );

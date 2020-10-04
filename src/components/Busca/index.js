@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ImagemLupa, InputBusca, WrapperBusca } from "./style";
 
-function Busca() {
+function Busca({ segundoEstilo = false }) {
   const [texto, setTexto] = useState("");
 
   useEffect(() => {
@@ -9,14 +9,14 @@ function Busca() {
   }, [texto]);
 
   return (
-    <WrapperBusca>
+    <WrapperBusca segundoEstilo={segundoEstilo}>
       <ImagemLupa src={"./imagens/Lupa/Lupa.png"} alt="lupa" />
       <InputBusca
-        placeholderTextColor="#FF1210"
         placeholder="Procure por heróis"
         value={texto}
         type="text"
         onChange={(e) => setTexto(e.target.value)}
+        segundoEstilo={segundoEstilo}
       />
     </WrapperBusca>
   );

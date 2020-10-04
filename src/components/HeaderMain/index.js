@@ -18,8 +18,8 @@ function HeaderMain() {
         Mergulhe no domínio deslumbrante de todos os personagens clássicos que
         você ama - e aqueles que você descobrirá em breve
       </p>
-      <div style={{ display: "flex", placeContent: "center" }}>
-        <Busca/>
+      <div style={{ display: "flex", placeContent: "center", margin: "50px" }}>
+        <Busca />
       </div>
     </header>
   );
