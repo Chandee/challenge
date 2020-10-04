@@ -40,6 +40,14 @@ function Home() {
       >
         <HeaderHeroi></HeaderHeroi>
         <InformacaoHeroi
+          dados={{
+            id: dadoPersonagem.id,
+            name: dadoPersonagem && dadoPersonagem.name,
+            thumbnail: {
+              path: dadoPersonagem && dadoPersonagem.thumbnail.path,
+              extension: dadoPersonagem && dadoPersonagem.thumbnail.extension,
+            },
+          }}
           descricao={dadoPersonagem.description}
           nome={dadoPersonagem.name && dadoPersonagem.name.toUpperCase()}
           qntdQuadrinho={

@@ -15,6 +15,9 @@ const WrapperApp = styled.div`
 function App() {
   const location = useLocation();
   console.log("asadas", location)
+  if(!localStorage.getItem("heroiFavorito")){
+    localStorage.setItem("heroiFavorito", JSON.stringify([]))
+  }
 
   return (
     <WrapperApp caminho={location.pathname}>

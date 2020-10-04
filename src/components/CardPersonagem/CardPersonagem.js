@@ -9,18 +9,23 @@ import {
 } from "./style";
 import Coracao from "../Coracao";
 import NomeComFavorito from "../NomeComFavorito";
+import { Link } from "react-router-dom";
 
-function CardPersonagem({ onClick, nome, imagem }) {
+
+function CardPersonagem({ onClick, nome, imagem, dados }) {
   return (
     <WrapperCardPersonagem>
-      <ImagemPersonagem
-        src={imagem}
-        alt={`personagem ${nome}`}
-        onClick={onClick}
-      />
+      <Link to={"/heroi?id=" + dados.id}>
+        <ImagemPersonagem
+          src={imagem}
+          alt={`personagem ${nome}`}
+          onClick={onClick}
+        />
+      </Link>
+
       <LinhaVermelha />
       <WrapperBottom>
-        <NomeComFavorito nome={nome}/>
+        <NomeComFavorito dados={dados} nome={nome} />
       </WrapperBottom>
     </WrapperCardPersonagem>
   );

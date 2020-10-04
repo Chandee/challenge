@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import IconeComTexto from "../IconeComTexto";
 import { SwitchStyle, WrapperSwitch } from "./style";
 
-
-function SwitchOpcao({ salvo = false, tamanho = 1 }) {
+function SwitchOpcao({ salvo = false, tamanho = 1, setSwitchHeroi }) {
   const [ativo, setAtivo] = useState(salvo);
 
   const caminhoImagem = ativo
@@ -18,7 +17,10 @@ function SwitchOpcao({ salvo = false, tamanho = 1 }) {
         alt="icone herói"
       />
       <SwitchStyle
-        onClick={() => setAtivo(!ativo)}
+        onClick={() => {
+          setSwitchHeroi();
+          setAtivo(!ativo);
+        }}
         src={caminhoImagem}
         alt="botao de switch"
         tamanho={tamanho}

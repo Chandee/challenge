@@ -1,7 +1,7 @@
 import React from "react";
 import IconeComTexto from "../IconeComTexto";
 import NomeComFavorito from "../NomeComFavorito";
-import { format, } from "date-fns";
+import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import {
   ContainerImagem,
@@ -26,12 +26,14 @@ function InformacaoHeroi({
   qntdFilmes,
   ultimoQuadrinho,
   imagem,
+  dados,
 }) {
   return (
     <WrapperHeroi>
       <TextoFundo>{nome && nome.toUpperCase()}</TextoFundo>
       <WrapperDescricao>
-        <NomeComFavorito nome={nome} tamanho={2.2} />
+        {console.log("verifica o que ta trafegando", dados)}
+        {dados && <NomeComFavorito dados={dados} nome={nome} tamanho={2.2} />}
         <ParagrafoDescricao>{descricao}</ParagrafoDescricao>
         <WrapperInfos>
           <div>
@@ -65,9 +67,10 @@ function InformacaoHeroi({
 
           <TextoHorario>
             {console.log("ultimo quadrinho", ultimoQuadrinho)}
-            {ultimoQuadrinho && format(new Date(ultimoQuadrinho), "dd MMM. yyyy", {
-              locale: ptBR,
-            })}
+            {ultimoQuadrinho &&
+              format(new Date(ultimoQuadrinho), "dd MMM. yyyy", {
+                locale: ptBR,
+              })}
           </TextoHorario>
         </WrapperHorario>
       </WrapperDescricao>
