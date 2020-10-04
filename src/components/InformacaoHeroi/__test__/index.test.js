@@ -52,7 +52,6 @@ test("Verifica verifica as infomações do heroi", () => {
       ultimoQuadrinho={"1969-12-31T19:00:00-0500"}
     />
   );
-  console.log("container", container.innerHTML);
   expect(queryAllByText(/hulk/i)[0]).toBeInTheDocument();
   expect(getByText(/Esse é o personagem/i)).toBeInTheDocument();
   expect(getByText(/3000/i)).toBeInTheDocument();

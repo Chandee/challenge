@@ -25,13 +25,10 @@ function NomeComFavorito({ nome, tamanho = 1, dados }) {
 
   const verificaFavorito = () => {
 		let dadosLocalStorage = JSON.parse(localStorage.getItem("heroiFavorito"));
-		console.log("entender o que ta acontenceondo", dados.name)
     let dadoFiltrado = dadosLocalStorage.filter((x) => x.name === dados.name);
     if (dadoFiltrado.length > 0) {
-			console.log("deu true")
       return true;
     } else {
-			console.log("deu falso")
       return false;
     }
   };

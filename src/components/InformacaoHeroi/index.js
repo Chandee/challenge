@@ -32,7 +32,6 @@ function InformacaoHeroi({
     <WrapperHeroi>
       <TextoFundo>{nome && nome.toUpperCase()}</TextoFundo>
       <WrapperDescricao>
-        {console.log("verifica o que ta trafegando", dados)}
         {dados && <NomeComFavorito dados={dados} nome={nome} tamanho={2.2} />}
         <ParagrafoDescricao>{descricao}</ParagrafoDescricao>
         <WrapperInfos>
@@ -66,7 +65,6 @@ function InformacaoHeroi({
           <h4>Último quadrinho:</h4>
 
           <TextoHorario>
-            {console.log("ultimo quadrinho", ultimoQuadrinho)}
             {ultimoQuadrinho &&
               format(new Date(ultimoQuadrinho), "dd MMM. yyyy", {
                 locale: ptBR,

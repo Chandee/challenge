@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import CardPersonagem from "../components/CardPersonagem/CardPersonagem";
 import CorpoMain from "../components/CorpoMain";
 import HeaderMain from "../components/HeaderMain";
-import ListaPersonagem from "../components/ListaPersonagem";
-import MenuFiltro from "../components/MenuFiltro";
-import SwitchOpacao from "../components/SwitchOpcao";
+
 import { heroiOrdemAlfabetica } from "../service/Endpoint";
 
 function Home() {
@@ -13,17 +10,14 @@ function Home() {
   useEffect(() => {
     heroiOrdemAlfabetica()
       .then((res) => {
-        console.log("resposta", res.data.data);
         setTodosHerois(res.data.data.results);
       })
-      .catch((err) => {
-        console.log("erroo", err.response.data);
-      });
+      .catch((err) => {});
   }, []);
 
   return (
     <>
-      <HeaderMain></HeaderMain>
+      <HeaderMain setTodosHerois={setTodosHerois}></HeaderMain>
       <CorpoMain personagens={todosHerois} />
 
       <footer

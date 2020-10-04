@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { resgataQuadrinho } from "../../service/Endpoint";
+import React from "react";
 import ComicHeroi from "../ComicHeroi";
 import { WrapperListaQuadrinho, WrapperQuadrinho } from "./style";
 
 function InfoQuadrinhos({ quadrinhos = []}) {
-  const teste = ["", "", "", "", "", "", "", "", "", ""];
-
 
   return (
     <WrapperQuadrinho>

@@ -17,18 +17,14 @@ function Home() {
   useEffect(() => {
     heroiEspecifico(idHero)
       .then((res) => {
-        console.log("resuiltado erspecifo", res);
         setDadoPersonagem(res.data.data.results[0]);
       })
-      .catch((err) => {
-        console.log("erro");
-      });
+      .catch((err) => {});
     resgataQuadrinho(idHero)
       .then((res) => {
-        console.log("quadrinhoo", res.data.data);
         setQuadrinhos(res.data.data.results);
       })
-      .catch((err) => console.log("deu ruim"));
+      .catch((err) => {});
   }, [idHero]);
 
   return (

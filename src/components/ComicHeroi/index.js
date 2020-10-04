@@ -13,13 +13,14 @@ function ComicHeroi({ titulo, imagem }) {
           width: "180px",
           marginBottom: "20px",
         }}
+        alt="comic"
         src={imagem}
       />
       <span
         style={{
           display: "block",
-          fontWeight: "bold",   
-          maxWidth: "180px"
+          fontWeight: "bold",
+          maxWidth: "180px",
         }}
       >
         {titulo}

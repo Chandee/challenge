@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { buscaHeroiPorNome } from "../../service/Endpoint";
 import { ImagemLupa, InputBusca, WrapperBusca } from "./style";
 
-function Busca({ segundoEstilo = false }) {
+function Busca({ segundoEstilo = false, setTodosHerois }) {
   const [texto, setTexto] = useState("");
 
   useEffect(() => {
-    console.log("meu texto", texto);
+    if (!segundoEstilo) {
+      buscaHeroiPorNome(texto).then((res) => {
+        setTodosHerois(res.data.data.results);
+      });
+    }
   }, [texto]);
 
   return (

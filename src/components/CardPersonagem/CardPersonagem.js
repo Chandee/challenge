@@ -2,12 +2,9 @@ import React from "react";
 import {
   ImagemPersonagem,
   LinhaVermelha,
-  NomePersonagem,
   WrapperBottom,
   WrapperCardPersonagem,
-  WrapperCoracao,
 } from "./style";
-import Coracao from "../Coracao";
 import NomeComFavorito from "../NomeComFavorito";
 import { Link } from "react-router-dom";
 

@@ -13,6 +13,7 @@ function HeaderHeroi() {
       <img
         src="./imagens/Logo/Group4@3x.png"
         style={{ width: "250px", height: '80px' }}
+        alt="marvel"
       />
       <div style={{ display: "flex", flex: '0 0 82%' }}>
         <Busca segundoEstilo/>

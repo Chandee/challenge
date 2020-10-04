@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import { Switch, Route, useLocation } from "react-router-dom";
 import Heroi from "./pages/Heroi";
 import Home from "./pages/Home";
@@ -14,7 +13,6 @@ const WrapperApp = styled.div`
 
 function App() {
   const location = useLocation();
-  console.log("asadas", location)
   if(!localStorage.getItem("heroiFavorito")){
     localStorage.setItem("heroiFavorito", JSON.stringify([]))
   }

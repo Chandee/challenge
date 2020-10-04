@@ -9,7 +9,6 @@ function Coracao({ salvo = false, tamanho = 1, executaFuncao, nome }) {
 
   const verificaLimite = () => {
     let dadosLocalStorage = JSON.parse(localStorage.getItem("heroiFavorito"));
-    console.log("vedrifica o que ta vindo", dadosLocalStorage);
     if (dadosLocalStorage.length < 5) {
       return true;
     } else {
