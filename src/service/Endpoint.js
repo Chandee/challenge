@@ -32,7 +32,6 @@ export const buscaHeroiPorNome = (nome) => {
   source && source.cancel("Operation canceled due to new request.");
 
   source = axios.CancelToken.source();
-  console.log("nome", nome.length);
   return axios.get(
     URLbase +
       "characters" +
