@@ -2,8 +2,7 @@ import React from "react";
 import ComicHeroi from "../ComicHeroi";
 import { WrapperListaQuadrinho, WrapperQuadrinho } from "./style";
 
-function InfoQuadrinhos({ quadrinhos = []}) {
-
+function InfoQuadrinhos({ quadrinhos = [] }) {
   return (
     <WrapperQuadrinho>
       <h2>Ultimos lançamentos</h2>

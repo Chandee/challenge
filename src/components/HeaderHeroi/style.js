@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const WrapperBusca = styled.div`
   display: flex;
   flex: 0 0 82%;
-  @media screen and (max-width: 1023px){
-      width: 100%;
-      place-content: center;
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+    place-content: center;
   }
 `;
 
@@ -19,7 +19,7 @@ export const WrapperHeader = styled.header`
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 1023px){
+  @media screen and (max-width: 1023px) {
     flex-direction: column;
     place-items: center;
   }
