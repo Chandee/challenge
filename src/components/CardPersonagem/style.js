@@ -14,6 +14,14 @@ export const NomePersonagem = styled.span`
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: ${({ tamanho }) => tamanho * 20}px;
+
+  @media screen and (max-width: 1023px){
+    max-width: 400px;
+  }
+
+  @media screen and (max-width: 768px){
+    max-width: 200px;
+  }
 `;
 
 export const WrapperBottom = styled.div`

@@ -4,6 +4,7 @@ import InfoQuadrinhos from "../components/InfoQuadrinhos";
 import InformacaoHeroi from "../components/InformacaoHeroi";
 import { useLocation } from "react-router-dom";
 import { heroiEspecifico, resgataQuadrinho } from "../service/Endpoint";
+import styled from "styled-components";
 
 function Home() {
   const [dadoPersonagem, setDadoPersonagem] = useState("");
@@ -27,13 +28,21 @@ function Home() {
       .catch((err) => {});
   }, [idHero]);
 
+  const ContainerGeral = styled.div`
+    padding: 40px 80px 0px 80px;
+
+    @media screen and (max-width: 1023px) {
+      padding: 20px 40px 0px 40px;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 5px 5px 0px 5px;
+    }
+  `;
+
   return (
     <>
-      <div
-        style={{
-          padding: "40px 80px 0px 80px",
-        }}
-      >
+      <ContainerGeral>
         <HeaderHeroi></HeaderHeroi>
         <InformacaoHeroi
           dados={{
@@ -59,7 +68,7 @@ function Home() {
           ultimoQuadrinho={quadrinhos[0] && quadrinhos[0].dates[0].date}
         />
         <InfoQuadrinhos id={query.get("id")} quadrinhos={quadrinhos} />
-      </div>
+      </ContainerGeral>
 
       <footer
         style={{

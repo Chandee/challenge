@@ -12,4 +12,13 @@ export const WrapperMenuFiltro = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 1023px){
+    max-width: 850px;
+  }
+
+  @media screen and (max-width: 900px){
+    flex-direction: column;
+    align-items: center;
+  }
 `

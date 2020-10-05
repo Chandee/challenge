@@ -1,24 +1,15 @@
 import React from "react";
 import Busca from "../Busca";
+import { WrapperBusca, WrapperLogo, WrapperHeader } from "./style";
 
 function HeaderHeroi() {
   return (
-    <header
-      style={{
-        width: "100%",
-        display: 'flex',
-        justifyContent: 'space-between'
-      }}
-    >
-      <img
-        src="./imagens/Logo/Group4@3x.png"
-        style={{ width: "250px", height: '80px' }}
-        alt="marvel"
-      />
-      <div style={{ display: "flex", flex: '0 0 82%' }}>
-        <Busca segundoEstilo/>
-      </div>
-    </header>
+    <WrapperHeader>
+      <WrapperLogo src="./imagens/Logo/Group4@3x.png" alt="marvel" />
+      <WrapperBusca>
+        <Busca segundoEstilo />
+      </WrapperBusca>
+    </WrapperHeader>
   );
 }
 

@@ -47,6 +47,16 @@ export const ContainerImagem = styled.img`
   max-width: 600px;
   width: auto;
   height: auto;
+
+  @media screen and (max-width: 1023px) {
+    width: 400px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const WrapperImagem = styled.div`
@@ -55,16 +65,32 @@ export const WrapperImagem = styled.div`
   flex: 1;
   place-content: center;
   z-index: 1;
+
+  @media screen and (max-width: 1023px) {
+    margin: 40px auto;
+  }
 `;
 
 export const WrapperDescricao = styled.div`
   position: relative;
   width: 20%;
+
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
 `;
 
 export const WrapperHeroi = styled.section`
   padding: 50px;
   display: flex;
+
+  @media screen and (max-width: 1023px) {
+    padding: 20px;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 767px){
+      padding: auto;
+  }
 `;
 
 export const TextoFundo = styled.div`
@@ -77,4 +103,15 @@ export const TextoFundo = styled.div`
   overflow: hidden;
   width: 80%;
   height: 450px;
+
+  @media screen and (max-width: 1023px) {
+    height: 380px;
+    font-size: 380px;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 767px){
+      height: 200px;
+      font-size: 170px;
+  }
 `;
