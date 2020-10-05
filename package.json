@@ -1,6 +1,7 @@
 {
   "name": "challange",
   "version": "0.1.0",
+  "homepage": "http://Chandee.github.io/challenge",
   "proxy": "https://gateway.marvel.com",
   "private": true,
   "dependencies": {
