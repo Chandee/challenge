@@ -16,6 +16,6 @@ Para executar o projeto utilize:
 
 ### `npm start`
 
-Para execução dos teste
+Para execução dos testes
 
 ### `npm test`
